@@ -10,4 +10,4 @@ This application has been built with AngularJS, NodeJS for take a client request
 
 Finally, i use a locally Deployd Server for using API and for using a database.
 
-**Inside project folder, download a tutorial video of my application.**
+**Inside project folder, download a video trailer of my application.**
