@@ -1,0 +1,29 @@
+﻿<html ng-app="sportsStore">
+<head>
+    <title>SportsStore</title>
+    <link rel="stylesheet" href="scripts/bootstrap.css" />
+    <link rel="stylesheet" href="scripts/bootstrap-theme.css" />
+</head>
+<body ng-controller="sportsStoreCtrl">
+    <div class="navbar navbar-inverse">
+        <a href="#/index" class="navbar-brand">SPORTS STORE</a>
+        <cart-summary></cart-summary>
+    </div>
+    <div class="alert alert-danger" ng-show="data.error">
+        Error {{data.error.status}}. The product data was not loaded
+        <a href="../public/index.html" class="alert-link">Click here to try again</a>
+    </div>
+
+    <ng-view></ng-view>
+
+    <script src="scripts/angular.js"></script>
+    <script src="ngmodules/angular-route.js"></script>
+    <script src="controllers/sportsStore.js"></script>
+    <script src="filters/customFilters.js"></script>
+    <script src="controllers/productListControllers.js"></script>
+    <script src="components/cart/cart.js"></script>
+    <script src="controllers/cartSummaryController.js"></script>
+    <script src="controllers/placeOrderCtrl.js"></script>
+
+</body>
+</html>

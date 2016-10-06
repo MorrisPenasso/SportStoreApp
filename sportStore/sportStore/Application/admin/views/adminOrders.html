@@ -1,0 +1,35 @@
+﻿<div ng-controller="ordersCtrl">
+    <table class="table table-striped">
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>City</b></td>
+            <td><b>Value</b></td>
+        </tr>
+        <tr ng-repeat="record in orders">
+            <td>{{record.name}}</td>
+            <td>{{record.city}}</td>
+            <td>{{getValue(record) | currency}}</td>
+            <td><button class="btn btn-primary" ng-click="getDetails(record)" ng-hide="showDetails">Details</button></td>
+            <td><button class="btn btn-primary" ng-click="hideDetail()" ng-show="showDetails">Hide Details</button></td>
+            
+        </tr>
+    </table>
+
+    <div ng-show="showDetails">
+        <table class="table table-striped">
+            <tr>
+                <td><b>Quantity</b></td>
+                <td><b>Name</b></td>
+                <td><b>Price</b></td>
+            </tr>
+            <tr ng-repeat="product in productDetails">
+                <td>{{product.count}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency}}</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+</div>

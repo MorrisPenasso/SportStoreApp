@@ -1,0 +1,29 @@
+﻿<div class="well" ng-controller="productCtrl">
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+            <tr ng-repeat="data in products" ng-hide="data.id == dataEdited.id">
+                <td>{{data.name}}</td>
+                <td>{{data.description}}</td>
+                <td>{{data.category}}</td>
+                <td>{{data.price | currency}}</td>
+                <td>
+                    <button class="btn btn-info" ng-click="editData(data)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" ng-click="deleteData(data)">Delete</button>
+                </td>
+            </tr>
+    </table>
+    <div ng-show="showEditing">
+        <input type="text" ng-model="dataEdited.name" />
+        <input type="text" ng-model="dataEdited.description" />
+        <input type="text" ng-model="dataEdited.category" />
+        <input type="text" ng-model="dataEdited.price" />
+        <button class="btn btn-warning" ng-click="saveProduct(dataEdited)" />Save
+    </div>
+</div>

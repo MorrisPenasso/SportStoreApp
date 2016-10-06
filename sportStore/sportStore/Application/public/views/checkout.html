@@ -1,0 +1,46 @@
+﻿<h2>Your cart</h2>
+
+<div ng-controller="cartSummaryController">
+
+    <div class="alert alert-danger" ng-show="cartData.length == 0">
+        There are no products in your shopping cart.
+        <a href="#/products" class="alert-link">Click here to return the catalogue</a>
+    </div>
+
+    <div ng-hide="CartData.length == 0">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Quantity</td>
+                    <td>Item</td>
+                    <td class="text-right">Price</td>
+                    <td class="text-right">Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in cartData">
+                    <td>{{item.count}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price | currency}}</td>
+                    <td>{{(item.price * item.count | currency)}}</td>
+                    <td>
+                        <button ng-click="remove(item.id)" class="btn btn-sm btn-warning">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Total</td>
+                    <td class="text-right">{{total() | currency}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="text-center">
+            <a class="btn btn-primary" href="#/products">Continue shopping</a>
+            <a class="btn btn-primary" href="#/placeorder">Place order now</a>
+        </div>
+    </div>
+
+</div>

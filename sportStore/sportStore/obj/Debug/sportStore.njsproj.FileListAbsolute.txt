@@ -1,0 +1,4 @@
+C:\Users\Morris\Desktop\sportStore\sportStore\obj\Debug\sportStore.njsprojResolveAssemblyReference.cache
+C:\Users\Morris\Desktop\sportStore\sportStore\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Morris\Desktop\ProAngularJs\sportsStore\sportStore\sportStore\obj\Debug\sportStore.njsprojResolveAssemblyReference.cache
+C:\Users\Morris\Desktop\ProAngularJs\sportsStore\sportStore\sportStore\bin\Microsoft.NodejsTools.WebRole.dll
